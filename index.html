@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="vi#000000rt" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" href="index.js">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <title>Document</title>
+    
+</head>
+<body>
+    <main id="container">
+        <form id="login_form">
+          <div id="form_header">
+            <h1>Login</h1>
+            <i id="mode_icon" class="fa-solid fa-moon "></i>
+          </div>
+            
+        <div id="social_midia">
+                 <a href="#">
+                    <img src="fecbook.png" alt="fecebook">
+                </a>
+                <a href="#">
+                    <img src="google.png" alt="google">
+                </a><a href="#">
+                    <img src="twitter.png" alt="twitter">
+                </a>
+        </div>
+            <div id="input">
+                <div class="input-box">
+                    <label for="name">
+                        Name
+                        <div class="input-field">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" id="name" name="name">
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <div class="input-box">
+                <label for="email">
+                    email
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" id="email" name="email">
+                    </div>
+                </label>
+            </div>
+            <div class="input-box">
+                <label for="senha">
+                    senha
+                    <div class="input-field">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" id="senha" name="senha">
+                    </div>
+                </label>
+                <div id="forgort_passwor">
+                    <a href="#">
+                        esqueci a minha senha?
+                    </a>
+                </div>
+            </div>
+            <button type="submit" id="login_button">
+                logim
+            </button>
+        </form>
+    </main>
+    <script>
+    const mode=document.getElementById('mode_icon');
+
+    mode.addEventListener('click',() => {
+    const form =document.getElementById('login_form');
+    if(mode.classList.contains('fa-moon')) {
+        mode.classList.remove('fa-moon');
+        mode.classList.add('fa-sun');
+
+        form.classList.add('dark')
+        return;
+    }
+    mode.classList.add('fa-moon');
+    mode.classList.remove('fa-sun');
+    form.classList.remove('dark')
+});
+    </script>
+</body>
+</html>
